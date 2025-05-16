@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+div.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 97vh;
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 98%;
+    flex-grow: 1;
+    overflow-y: hidden
+}
+
+@source "../node_modules/@ferrucc-io/emoji-picker";
