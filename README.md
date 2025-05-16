@@ -1,8 +1,13 @@
 # MindSet 
 
-![MindSet Icon Concept](https://via.placeholder.com/150/2B5CE6/FFFFFF?text=MS) *(Replace with actual icon)*  
-
+<!-- ![MindSet Icon Concept](https://via.placeholder.com/150/2B5CE6/FFFFFF?text=MS) -->
 A **developer-centric text editor** built with Tauri + React, designed to organize ideas and notes with the power of a database-backed system.
+
+## 📝 Why I Built This
+As developers, our tools shape our workflow. I grew tired of juggling ideas across scattered files, so I built MindSet - a desktop text editor tailored to how I work. I needed:
+- A centralized place for technical notes and ideas
+- Better organization than scattered text files
+- A project to explore Tauri's capabilities
 
 ## 🚀 Features
 
@@ -22,11 +27,6 @@ A **developer-centric text editor** built with Tauri + React, designed to organi
 | **Styling**     | Tailwind CSS        |
 | **Packaging**   | Tauri CLI           |
 
-## 📝 Why I Built This
-As a developer, I needed:
-- A centralized place for technical notes and ideas
-- Better organization than scattered text files
-- A project to explore Tauri's capabilities
 
 ## 📦 Installation
 
@@ -36,7 +36,7 @@ As a developer, I needed:
 
 2. **Run locally**:
    ```bash
-   git clone https://github.com/yourusername/mindset.git
+   git clone https://github.com/ConstantinBerson/mind-set.git
    cd mindset
    npm install
    npm run tauri dev
@@ -44,17 +44,17 @@ As a developer, I needed:
     ```bash
     npm run tauri build
 
-## 🖥️ UI Preview  
+<!-- ## 🖥️ UI Preview  
 *(Replace with actual screenshot)*  
-```plaintext
-----------------------------------
+
+
 |   MindSet - Notes Manager      |
 |--------------------------------|
-| 📝 Notes List      |  Editor   |
+| 📝 Notes List     |  Editor    |
 |-------------------|-----------|
 | • Idea 1          |           |
 | • Project Draft   |   ### Hi  |
-| • Bug Fixes       |   *Italics* |
-----------------------------------
-```
+| • Bug Fixes       |   *Italics* | -->
+
 ## 📜 License
+MIT © ConstantinBerson
