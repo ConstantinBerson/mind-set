@@ -1,7 +1,7 @@
 # MindSet 
 
 <!-- ![MindSet Icon Concept](https://via.placeholder.com/150/2B5CE6/FFFFFF?text=MS) -->
-A **developer-centric text editor** built with Tauri + React, designed to organize ideas and notes with the power of a database-backed system.
+A **developer-centric text editor** built with Tauri + Angular, designed to organize ideas and notes with the power of a database-backed system.
 
 ## 📝 Why I Built This
 As developers, our tools shape our workflow. I grew tired of juggling ideas across scattered files, so I built MindSet - a desktop text editor tailored to how I work. I needed:
@@ -21,9 +21,10 @@ As developers, our tools shape our workflow. I grew tired of juggling ideas acro
 
 | Component       | Technology          |
 |-----------------|---------------------|
-| **Frontend**    | React (TypeScript)  |
+| **Frontend**    | Angular             |
 | **Backend**     | Tauri (Rust)        |
 | **Database**    | SQLite              |
+| **ORM**         | SeaORM              |
 | **Styling**     | Tailwind CSS        |
 | **Packaging**   | Tauri CLI           |
 
