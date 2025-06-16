@@ -1,13 +1,14 @@
 use std::{process, sync::Mutex};
 use futures::executor::block_on;
-use db::establish_connection;
-use state::DBState;
+use utils::db::establish_connection;
+use utils::state::DBState;
 use tauri::Manager;
+use migration::{Migrator, MigratorTrait};
 
+mod utils;
+mod entity;
+mod commands;
 
-mod db;
-mod config;
-mod state;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -17,6 +18,7 @@ pub fn run() {
       let path = path_buff.to_str().ok_or("Path to str error").expect("An error occure, can't convert path to str");
       match block_on(establish_connection(path)) {
         Ok(db) =>{
+          
           app.manage(DBState{
             db: Mutex::new(Some(db))
           });

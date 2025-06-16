@@ -17,7 +17,9 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 [build-dependencies]
 tauri-build = { version = "2.2.0", features = [] }
 
+
 [dependencies]
+migration = { path = "migration" }
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 dotenv = "0.15"
@@ -25,5 +27,9 @@ thiserror = "1.0"
 log = "0.4"
 tauri = { version = "2.5.0", features = [] }
 tauri-plugin-log = "2.0.0-rc"
-sea-orm = { version = "1.1.1", features = [ "sqlx-sqlite", "runtime-async-std-native-tls", "macros" ] }
+sea-orm = { version = "1.1.1", features = [ 
+                "sqlx-sqlite",
+                "runtime-async-std-native-tls",
+                "macros"
+        ] }
 futures = "0.3.31"
