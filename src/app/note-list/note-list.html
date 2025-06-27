@@ -1,0 +1,17 @@
+<div class="note-list">
+    <div class="header">
+        <div class="search-btn" (click)="openSearchModal()">Search...</div>
+        <button class="btn-action">New Document</button>
+    </div>
+    <div class="list">
+        @for (i of [0,1,2,3,4,5,6,7,8,9,10,11]; track $index) {
+            <div class="item card">
+                <div class="item-header">
+                    <span class="title"><b>Title of the Document {{i}}</b></span>
+                    <span class="edit-date">last edited: mm/dd/yyyy</span>
+                </div>
+                <span class="content">Content snippe of the fetched document {{i}}.</span> 
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,35 @@
+:root {
+    --divider-color: #e0e0e0;
+}
+
+.menu-bar{
+    display: flex;
+    align-items: center;
+    border-radius: 1em !important;
+    button{
+        color: white;
+    }
+}
+
+.editor-container{
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 1vh 0;
+}
+.editor{
+    width: 60%;
+}
+.tiptap::ng-deep{
+    padding: .5em;
+}
+.divider{
+    height: 80%;
+    width: 1px;
+    background-color: gray;
+    margin: 0 .25em;
+}

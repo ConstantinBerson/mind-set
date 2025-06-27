@@ -1,0 +1,110 @@
+<div class="editor-container">
+    <div class="menu-bar card">
+        <div class="btn-group">
+            <button class="btn btn-icon" (click)="editor.chain().focus().undo().run()">
+                <ng-icon name="remixResetLeftLine"></ng-icon>
+            </button>
+            <button class="btn btn-icon" (click)="editor.chain().focus().redo().run()">
+                <ng-icon name="remixResetRightLine"></ng-icon>
+            </button>
+        </div>
+        <div class="divider"></div>
+        <div class="btn-group">
+            <select class="card" (change)="editor.chain().focus()">
+                <option value="p" (click)="this.editor.chain().focus().setParagraph().run()">
+                    Paragraph
+                </option>
+                <option value="1" (click)="this.editor.chain().focus().setHeading({level: 1}).run()">
+                    Heading 1
+                </option>
+                <option value="2" (click)="this.editor.chain().focus().setHeading({level: 2}).run()">
+                    Heading 2
+                </option>
+                <option value="3" (click)="this.editor.chain().focus().setHeading({level: 3}).run()">
+                    Heading 3
+                </option>
+                <option value="4" (click)="this.editor.chain().focus().setHeading({level: 4}).run()">
+                    Heading 4
+                </option>
+            </select>
+        </div>
+        <div class="divider"></div>
+        <div class="btn-group charcarter">
+            <button class="btn btn-icon"
+                    (click)="editor.chain().focus().toggleBold().run()"
+                    [ngClass]="{'active': editor.isActive('bold')}"
+            >
+                <ng-icon [size]="'1rem'" name="remixBold"></ng-icon>
+            </button>
+            <button class="btn btn-icon" 
+                    (click)="editor.chain().focus().toggleItalic().run()"
+                    [ngClass]="{'active': editor.isActive('italic')}"
+            >
+                <ng-icon name="remixItalic"></ng-icon>
+            </button>
+            <button class="btn btn-icon" 
+                    (click)="editor.chain().focus().toggleUnderline().run()" 
+                    [ngClass]="{'active': editor.isActive('underline')}"
+            >
+                <ng-icon name="remixUnderline"></ng-icon>
+            </button>
+            <button class="btn btn-icon" 
+                    (click)="editor.chain().focus().toggleStrike().run()" 
+                    [ngClass]="{'active': editor.isActive('strike')}"
+            >
+                <ng-icon name="remixStrikethrough"></ng-icon>
+            </button>
+            <button class="btn btn-icon">
+                <ng-icon name="remixEmotionFill"></ng-icon>
+            </button>
+            <button class="btn btn-icon" 
+                    (click)="editor.chain().focus().toggleCode().run()"
+                    [ngClass]="{'active': editor.isActive('code')}"
+            >
+                <ng-icon name="remixCodeSSlashLine"></ng-icon>
+            </button>
+            <button class="btn btn-icon" 
+                    (click)="editor.chain().focus().toggleCodeBlock().run()"
+                    [ngClass]="{'active': editor.isActive('codeBlock')}"
+            >
+                <ng-icon name="remixCodeBlock"></ng-icon>
+            </button>
+        </div>
+        <div class="divider"></div>
+        <div class="btn-group block">
+            <button class="btn btn-icon">
+                <ng-icon name="remixListUnordered"></ng-icon>
+            </button>
+            <button class="btn btn-icon">
+                <ng-icon name="remixListOrdered2"></ng-icon>
+            </button>
+        </div>
+        <div class="divider"></div>
+        <div class="btn-group alignment">
+            <button class="btn btn-icon"
+                    (click)="editor.chain().focus().setTextAlign('left').run()"
+            >
+                <ng-icon name="remixAlignLeft"></ng-icon>
+            </button>
+            <button class="btn btn-icon"
+                    (click)="editor.chain().focus().setTextAlign('center').run()"
+            >
+                <ng-icon name="remixAlignCenter"></ng-icon>
+            </button>
+            <button class="btn btn-icon"
+                    (click)="editor.chain().focus().setTextAlign('right').run()"
+            >
+                <ng-icon name="remixAlignRight"></ng-icon>
+            </button>
+            <button class="btn btn-icon"
+                    (click)="editor.chain().focus().setTextAlign('justify').run()"
+            >
+                <ng-icon name="remixAlignJustify"></ng-icon>
+            </button>
+        </div>
+
+    </div>
+    <div class="editor">
+        <tiptap-editor #tiptap [style]="editorStyle" [editor]="editor"></tiptap-editor>
+    </div>
+</div>
